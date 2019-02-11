@@ -1,0 +1,91 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000,
+		z-index-overlay:	100000,
+		max-spotlight:		20,
+		max-wrapper-styles:		6
+	);
+
+// Duration.
+	$duration: (
+		menu:				0.35s,
+		transition:			0.2s,
+		banner:				2.5s
+	);
+
+// Size.
+	$size: (
+		border-radius:		4px,
+		element-height:		2.75em,
+		element-margin:		2em,
+		inner:				65em,
+		sidebar-width:		26em,
+		sidebar-width-alt:	24em,
+		gutter:				3em,
+					section-spacing:		(
+									large:				3em,
+									medium:				2em,
+									small:				1.75em
+					),
+					wrapper-edges:			(
+									large:				6.5em,
+									medium:				4.75em,
+									small:				2.5em
+					)
+	);
+
+// Font.
+	$font: (
+		family:				('Source Sans Pro', Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				300,
+		weight-bold:		600,
+		////			family:				('Source Sans Pro', sans-serif),
+		//			family:				('Open Sans', sans-serif),
+		//			family-heading:		('Roboto Slab', serif),
+		//			family-fixed:		('Courier New', monospace),
+		//			weight:				400,
+		//			weight-bold:		600,
+		//			weight-heading:		700,
+		//			weight-heading-alt:	400,
+		//			kerning-heading:	0.075em,
+		letter-spacing:		0.025em,
+		letter-spacing-alt:	0.25em,
+					//family:					('Source Sans Pro', Helvetica, sans-serif),
+					//family-fixed:			('Courier New', monospace),
+					family-heading:			(Raleway, Helvetica, sans-serif),
+					//weight:					300,
+					//weight-bold:			600,
+					weight-heading:			200,
+					weight-heading-bold:	700,
+					kern-heading:			0.1em
+	);
+
+// Palette.
+	$palette: (
+		bg:					#242943,
+		bg-alt:				#2a2f4a,
+		fg:					#ffffff,
+		fg-bold:			#ffffff,
+		fg-light:			rgba(244,244,255,0.2),
+		//bg:					#ffffff,
+		//bg-alt:				#f5f6f7,
+		//bg:					#690101,
+		//bg-alt:				#ded3d7,
+		//fg:					#7f888f,
+		//fg-bold:			#3d4449,
+		//fg-light:			#9fa3a6,
+		border:				rgba(212,212,255,0.1),
+		border-bg:			rgba(212,212,255,0.035),
+		highlight:			#9bf1ff,
+		accent:				#f56a6a,
+		accent1:			#6fc3df,
+		accent2:			#8d82c4,
+		accent3:			#ec8d81,
+		accent4:			#e7b788,
+		accent5:			#8ea9e8,
+		accent6:			#87c5a4
+	);
+
+$size-wrapper-pad-tb: 6em;
+$size-wrapper-pad-lr: 3em;
