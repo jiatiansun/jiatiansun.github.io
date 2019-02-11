@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mitsuba_clt</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<!--<li><a href="landing.html">Landing</a></li>-->
+							<!--<li><a href="generic.html">Generic</a></li>-->
+							<!--<li><a href="elements.html">Elements</a></li>-->
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Mitsuba_clt</a></li>
+							<!--<li><a href="#" class="button fit">Log In</a></li>-->
+						</ul>
+						<ul class="links">
+							<li><a href="scotty3D.html">Scotty3D</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Physically Based Renderer for simulation of modern imaging</h1>
+									</header>
+									<span class="image main"><img src="images/dragon_2048_614.png" alt="" /></span>
+									<!-- Background -->
+										<h2 id="content">Background <a href="https://github.com/cmu-ci-lab/mitsuba_clt" class="icon fa-github"><span class="label">GitHub</span></a></h2>
+										<p>Over the past two decades, computational photography research has resulted in the emergence of many new imaging modalitties: From cameras that can record video
+											at trillion frames per second, to cameras that can see around corners or through tissue, and to cameras that can optically separate unscattered from scattered light.
+											<br>
+											Unfortunately, computer graphics has not kept up: Even though nowadays we have access to high-performance and fully physically-accurate rendering engines for
+											simulating images captured by regular cameras, access to similar tools for these emerging types of cameras is still scarce or non-existent.
+											This greatly hinders computational photography research, making it difficult to perform simulated experiments or investigate imaging design considerations.
+											The purpose of this project is to develop software tools to alleviate these issues. The focus of the project is expanding an existing physicallly-accurate(Mitsuba) to
+											enable it to simulate various modern types of imaging, including: structured light, epipolar imaging, transient imaging, speckle imaging, and light transport probing.</p>
+
+									<!--Intro-->
+									<hr class="major" />
+										<h2 id="content">Current State of Research</h2>
+										<p>Currently, the expanded physically based renderer for simulation of computationa imaging, Mitsuba_clt, can achieve simulation of camera system that separates scattered
+											and unscatterd light, row, column and identity light transport probing. Specifically, to enable simulation of these two kinds,
+											following features/plugins have been added to Mitsuba.</p>
+
+									<!--pluginList-->
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h4>Plugins to simulate primal dual coding</h4>
+											<ul class="alt">
+												<li><a href="#perspEmitter">Perspective Projector</a></li>
+												<li><a href="#orthoEmitter">Orthographic Projector</a></li>
+												<li><a href="#codedPersp">Coded Perspective Camera</a></li>
+												<li><a href="#codedOrtho">Coded Orthographic Camera</a></li>
+
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+
+											<h4>Plugins to simulate light transport probing</h4>
+											<ul class="alt">
+												<li>Disparity Camera</li>
+												<li>Identity light transport Probing</li>
+												<li>Light transport Probing by Row</li>
+												<li>Light transport Probing by Column</li>
+											</ul>
+
+										</div>
+									</div>
+									<!--Plugin demo-->
+									<hr class="major" />
+
+									<h2>Plugins to simulate primal dual coding</h2>
+										<!--</div>-->
+									    <div class="row">
+											<div class="col-6 col-12-small" id="perspEmitter">
+												<h3>Perspective Projector</h3>
+												<div class="fit">
+													<div class="row gtr-50 gtr-uniform">
+														<div class="col-6"><span class="image fit"><img src="images/egg_garden_1024.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/egg_scotty_1024.png" alt="" /></span></div>
+														<div class="col-6"><span class="align-center fit"><h5><em>perspective projection over refractive material</em></h5></span></div>
+														<div class="col-6"><span class="align-center fit"><h5><em>perspective projection over diffuse material</em></h5></span></div>
+													</div>
+												</div>
+												<p>Perspective projector plugin takes in an image/texture and other basic information like its position, orientation and focus distance in the scene.
+													The brightness of the projector can also be adjusted by its 'scale' parameter.
+												It uses perspective projection to cast specified images onto virtual objects in the scene.
+												To decrease the variance,  the projector makes use of importance sampling so that rays with directions of larger radiance are more likely to be sampled
+												from this light source.</p>
+										</div>
+											<div class="col-6 col-12-small" id="orthoEmitter">
+												<h3>Orthographic Projector</h3>
+												<div class="fit">
+													<div class="row gtr-50 gtr-uniform">
+														<div class="col-6"><span class="image fit"><img src="images/egg_ortho_garden_glass.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/egg_ortho_scotty3D.png" alt="" /></span></div>
+														<div class="col-6"><span class="align-center fit"><h5><em>orthographic projection over refractive material</em></h5></span></div>
+														<div class="col-6"><span class="align-center fit"><h5><em>orthographic projection over diffuse material</em></h5></span></div>
+													</div>
+												</div>
+												<p> Similarly, orthographic projector plugin takes in an image/texture and other basic information like its position, orientation and focus distance in the scene.
+													The brightness of the projector can also be adjusted by its 'irradiance' parameter.
+													It uses orthographic projection(parallel projection) to cast specified images onto virtual objects in the scene.
+													To decrease the variance,  the projector makes use of importance sampling so that positions of larger irradiance are more likely to be sampled
+													from this light source. </p>
+											</div>
+											<div class="col-6 col-12-xsmall" id="codedPersp">
+												<h3>Coded Perspective Camera</h3>
+												<div class="fit">
+													<div class="row gtr-50 gtr-uniform">
+														<div class="col-6"><span class="image fit"><img src="images/dragon_coded_stripe.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/egg_coded_stripe.png" alt="" /></span></div>
+														<div class="col-12"><span class="align-center fit"><h5><em>perspective camera with stripe mask</em></h5></span></div>
+														<!--<div class="col-6"><span class="align-center fit"><h5><em>perspective projection over diffuse material</em></h5></span></div>-->
+													</div>
+												</div>
+												<p>The coded perspective camera takes in a texture as a filter to be applied to the rendered image.
+													The advantage of loading the filter directly into the rendering process instead of post-processing is to improve
+													the sampling efficiency by using importance sampling with the loaded filter. </p>
+											</div>
+											<div class="col-6 col-12-small" id="codedOrtho">
+												<h3>Coded Orthographic Camera</h3>
+												<div class="fit">
+													<div class="row gtr-50 gtr-uniform">
+														<div class="col-6"><span class="image fit"><img src="images/dragon_coded_ortho_stripe.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/egg_coded_ortho.png" alt="" /></span></div>
+														<div class="col-12"><span class="align-center fit"><h5><em>orthographic camera with stripe mask</em></h5></span></div>
+														<!--<div class="col-6"><span class="align-center fit"><h5><em>perspective projection over diffuse material</em></h5></span></div>-->
+													</div>
+												</div>
+												<p>The coded orthographic camera is similar to the coded perspective camera, since they both apply a filter to the camera in rendering process.
+													Both of them makes use of importance sampling. The only difference is that orthographic camera uses orthographic projection while the perspective
+													camera uses perspective projection.</p>
+											</div>
+										</div>
+
+									<hr class="major" />
+
+									<h2>Simulation: Separation of direct and indirect light</h2>
+									<p>With the extended plugins, we can simulate the imaging that separates direct and indirect light with primal dual probing
+										mentioned in the paper <a href="https://dl.acm.org/ft_gateway.cfm?id=2185535&ftid=1271411&dwn=1&CFID=45955947&CFTOKEN=503480bef6dbfbcb-1AF647E7-B7E3-1D47-172D929569475C7F">
+											<em>Primal-dual coding to probe light transport</em></a>. Specifically, by masking both camera and projector in the scene with specified light tranport matrix,
+											the technique allows us to acquire images that have specific light transport paths been blocked, attenuated or enhanced. In this example simulation,
+										we use the technique to separate the direct and indirect light transport in the scene.</p>
+
+									<div class="row">
+										<div class="fit">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/egg_full.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/egg_approx_checker.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/egg_approx_direct.png" alt="" /></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Full Illumination</em></h5></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Global Illumination</em></h5></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Direct Illumination</em></h5></span></div>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Jiatian sun</li><li>Design Reference: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
