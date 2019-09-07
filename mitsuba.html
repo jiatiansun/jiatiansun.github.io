@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>Jiatian</strong> <span>'s portfolio</span></a>
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -62,8 +62,8 @@
 											This greatly hinders computational photography research, making it difficult to perform simulated experiments or investigate imaging design considerations.
 											The purpose of this project is to develop software tools to alleviate these issues. The focus of the project is expanding an existing physicallly-accurate(Mitsuba) to
 											enable it to simulate various modern types of imaging, including: structured light, epipolar imaging, transient imaging, speckle imaging, and light transport probing.</p>
-
 									<!--Intro-->
+
 									<hr class="major" />
 										<h2 id="content">Current State of Research</h2>
 										<p>Currently, the expanded physically based renderer for simulation of computationa imaging, Mitsuba_clt, can achieve simulation of camera system that separates scattered
@@ -73,7 +73,7 @@
 									<!--pluginList-->
 									<div class="row">
 										<div class="col-6 col-12-small">
-											<h4>Plugins to simulate primal dual coding</h4>
+											<h4>Plugins for Coded Camera and Structured Light</h4>
 											<ul class="alt">
 												<li><a href="#perspEmitter">Perspective Projector</a></li>
 												<li><a href="#orthoEmitter">Orthographic Projector</a></li>
@@ -84,12 +84,12 @@
 										</div>
 										<div class="col-6 col-12-small">
 
-											<h4>Plugins to simulate light transport probing</h4>
+											<h4>Plugins for Light Transport Probing</h4>
 											<ul class="alt">
-												<li>Disparity Camera</li>
-												<li>Identity light transport Probing</li>
-												<li>Light transport Probing by Row</li>
-												<li>Light transport Probing by Column</li>
+												<li><a href="#IdentityProbing">Identity Light Transport Probing</a></li>
+												<li><a href="#RowProbing">Light Transport Probing by Row</a></li>
+												<li><a href="#ColumnProbing">Light Transport Probing by Column</a></li>
+												<li>Epipolar Imaging</li>
 											</ul>
 
 										</div>
@@ -97,7 +97,7 @@
 									<!--Plugin demo-->
 									<hr class="major" />
 
-									<h2>Plugins to simulate primal dual coding</h2>
+									<h2>Plugins for Coded Camera and Structured Light</h2>
 										<!--</div>-->
 									    <div class="row">
 											<div class="col-6 col-12-small" id="perspEmitter">
@@ -162,10 +162,116 @@
 											</div>
 										</div>
 
+									<h2>Primal Dual Coding to Probe Light Transport</h2>
+									<h3 id="theory">Theory </h3>
+									<p> A widespread assumption of the relationship between light sources and camera is the light transport equation: <b><em>P = T i</em></b>
+										<br>
+										where P is the image received by camera (a vector of pixels of the image), T is the light transport matrix inherently
+										encodes the scene's interaction with the camera and project and i is the light sources' representation vector.
+										Based on this assumption, we can develop the <em>Transport Probing Equation</em>:
+									</p>
+									<h4 style="text-align:center;"><em>P = (Π · T) x i</em></h4>
+									<span class="image main"><img src="images/theory/transport_matrix.svg" alt="" height="250" />
+									<p>
+										as mentioned in O'Toole's 2012 paper <em>Primal-Dual Coding to Probe Light Transport</em>.
+										Specifically, a probing matrix Π is added to the light transport equation to achieve control of the image acquisition process.
+										In the rendering, this probing matrix applied to the transport matrix can be achieved by modulated light source (in our case, perspective projector)
+										and coding of the camera.
+										Below are three plugins developed to achieve three kinds of basic probing matrix: "idenity probing matrix", "row probing matrix" and "column probing matrix".
+										We will describe in detail the functionality of each probing matrix in their own section and show their demo images under the same scene configuration in which
+										rectified perspective projector and camera pair are facing towards two walls in 90 perpendicular to each other.
+									</p>
+
+									<div class="row">
+										<div class="col-6 col-12-xsmall" id="demo_scenes1">
+											<div class="fit">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/tw/tw_full.png" alt="" /></span></div>
+													<!--<div class="col-6"><span class="image fit"><img src="images/light_curtain/light_curtain_full.png" alt="" /></span></div>-->
+													<div class="col-6"><span class="image fit"><img src="images/tw/tw_identity.png" alt="" /></span></div>
+													<!--<div class="col-6"><span class="image fit"><img src="images/tw/tw_column_39.png" alt="" /></span></div>-->
+													<div class="col-6"><span class="align-center fit"><h5><em>A Corner Under White Illumination</em></h5></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>A Corner with Identity Probing</em></h5></span></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-6 col-12-xsmall" id="demo_scenes2">
+											<div class="fit">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/tw/tw_row.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/tw/tw_column_35.png" alt="" /></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>A Corner with Row Probing</em></h5></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>A Corner with Disparity Column Probing</em></h5></span></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-4 col-12-xsmall" id="IdentityProbing">
+											<h3>Identity Probing</h3>
+											<div class="fit">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/light_curtain/light_curtain_full.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/light_curtain/cbox_identity.png" alt="" /></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>Cornell Box under White Illumination</em></h5></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>Cornell Box With Identity Probing</em></h5></span></div>
+												</div>
+											</div>
+											<p>Identity Probing names after its probing matrix which is an identity matrix. To achieve this probing matrix in the rendering,
+												we use bidrectional path tracing and only sample light paths that start from and end with the same pixel location on the projector and the camera.
+												This technique can help eliminate most indirect light paths in the scene. Therefore by looking at the demo image, you can tell most of the global illumniation
+												in between the two walls has been eliminated.
+											</p>
+										</div>
+										<div class="col-4 col-12-small" id="RowProbing">
+											<h3>Row Probing</h3>
+											<div class="fit">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/light_curtain/light_curtain_full.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/light_curtain/cbox_row.png" alt="" /></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>Cornell Box under White Illumination</em></h5></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>Cornell Box With Row Probing</em></h5></span></div>
+													<!--<div class="col-6"><span class="align-center fit"><h5><em>perspective projection over diffuse material</em></h5></span></div>-->
+												</div>
+											</div>
+											<p> Row Probing is named "row" to imply the sampling process of the projector. Specifically, for each light path starting from
+												(x,y) pixel position on the camera, we only sample from pixels from the same row y on the projector side.
+												This technique has different effect under different spatial relation between the projector and the camera.
+												When placed the projector and the camera are a rectified pair and their row's axis is parallel to displacement vector from the camera center to the
+												projector center, the probing technique would have a similar functionality as the identity matrix: eliminate most indirect light paths in the scene.
+												Therefore by looking at the demo images (either cornell box or the two wall scene), you can tell most of the global illumniation
+												has been eliminated in the identity probing version. Column Probing would have similar effect if the camera and projector's column axis is parallel
+												to displacement vector from camera center to the projector center. </p>
+										</div>
+										<div class="col-4 col-12-xsmall" id="ColumnProbing">
+											<h3>Column Probing</h3>
+											<div class="fit">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/light_curtain/light_curtain_full.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/light_curtain/lightcurtain_16.png" alt="" /></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>Cornell Box under white Illumination</em></h5></span></div>
+													<div class="col-6"><span class="align-center fit"><h5><em>Cornell Box With Column Probing and disparity = 16</em></h5></span></div>
+													<!--<div class="col-6"><span class="align-center fit"><h5><em>perspective projection over diffuse material</em></h5></span></div>-->
+												</div>
+											</div>
+											<p> Column Probing is similar to row probing. The only difference is that in this rendering, for each light path starting from
+												(x,y) pixel position on the camera, we only sample from pixels from the same row y on the projector side.
+												This technique also has different effect under different spatial relation between the projector and the camera.
+												When placed the projector and the camera are a rectified pair and their column's axis is perpendicular to displacement vector from the camera center to the
+												projector center, the probing technique would mostly only allow light paths getting reflected from certain depth of the scene.
+												Specifically, this depth is controlled by the disparity of the stereo pair.
+												Therefore by looking at the demo images (either cornell box or the two wall scene), you can tell that probing with disparity only allow a slice of
+												scene at certain depth to be lighten up. Row probing can also show only light from certain depth, if the camera and projector are placed so that thier
+												row axis is perpendicular to the displacement vector from the camera center to the projector center.
+											</p>
+										</div>
+									</div>
+
+
 									<hr class="major" />
 
-									<h2>Simulation: Separation of direct and indirect light</h2>
-									<p>With the extended plugins, we can simulate the imaging that separates direct and indirect light with primal dual probing
+									<h2>Simulation 1: Separation of direct and indirect light</h2>
+									<p>With the extended plugins, we can simulate the imaging that separates direct and indirect light with epipolar probing or primal dual probing
 										mentioned in the paper <a href="https://dl.acm.org/ft_gateway.cfm?id=2185535&ftid=1271411&dwn=1&CFID=45955947&CFTOKEN=503480bef6dbfbcb-1AF647E7-B7E3-1D47-172D929569475C7F">
 											<em>Primal-dual coding to probe light transport</em></a>. Specifically, by masking both camera and projector in the scene with specified light tranport matrix,
 											the technique allows us to acquire images that have specific light transport paths been blocked, attenuated or enhanced. In this example simulation,
@@ -174,28 +280,79 @@
 									<div class="row">
 										<div class="fit">
 											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/egg_full.png" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/egg_approx_checker.png" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/egg_approx_direct.png" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/eggs/egg_white.png" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/eggs/egg_analytic_direct.png" alt="" /></span></div>
+												<div class="col-6"><span class="align-center fit"><h5><em>Full Illumination</em></h5></span></div>
+												<div class="col-6"><span class="align-center fit"><h5><em>Direct Illumination</em></h5></span></div>
+
+												<div class="col-4"><span class="image fit"><img src="images/eggs/egg_epipolar.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/eggs/egg_approx_ddirect.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/eggs/egg_global.png" alt="" /></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Epipolar Probing</em></h5></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Direct Illumination Reconstruction with High Frequency Texture</em></h5></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Global Illumination Reconstruction with High Frequency Texture</em></h5></span></div>
+											</div>
+										</div>
+									</div>
+
+									<h2>Simulation 2: Light Curtain</h2>
+									<p>With the extended plugins, we can also show light paths from certain depth of the scene. Specifically, we make use of column/row probing
+									with disparity to render these images</p>
+
+									<div class="row">
+										<div class="fit">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/light_curtain/light_curtain_full.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/light_curtain/lightcurtain_16.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/light_curtain/lightcurtain_23.png" alt="" /></span></div>
 												<div class="col-4"><span class="align-center fit"><h5><em>Full Illumination</em></h5></span></div>
-												<div class="col-4"><span class="align-center fit"><h5><em>Global Illumination</em></h5></span></div>
-												<div class="col-4"><span class="align-center fit"><h5><em>Direct Illumination</em></h5></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Column Probing with Disparity = 16</em></h5></span></div>
+												<div class="col-4"><span class="align-center fit"><h5><em>Column Probing with Dispairty = 23</em></h5></span></div>
 											</div>
 										</div>
 									</div>
 
 
+										<h2>Simulation 3: Seeing Through Fog</h2>
+									<p>With the extended plugins, researchers can test out some imaging technique's performance of seeing through fog.
+										In the demo rendering below, we construct a scene where a CMU scotty is hidden behind the homogenous fog.
+										Then, we test out different imaging techniques' performance at achieving this task,
+										including epipolar imaging, column probing with disparity and identity probing. </p>
+
+									<div class="row">
+										<div class="fit">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-3"><span class="image fit"><img src="images/fog/full.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/fog/direct.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/fog/epi.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/fog/disp.png" alt="" /></span></div>
+												<div class="col-3"><span class="align-center fit"><h5><em>Full Illumination</em></h5></span></div>
+												<div class="col-3"><span class="align-center fit"><h5><em>Identity Probing</em></h5></span></div>
+												<div class="col-3"><span class="align-center fit"><h5><em>Epipolar Imaging</em></h5></span></div>
+												<div class="col-3"><span class="align-center fit"><h5><em>Column Probing with Dispairty</em></h5></span></div>
+											</div>
+										</div>
+									</div>
+
+								<!--<header class="major">-->
+									<h2>Poster</h2>
+								<!--</header>-->
+								<p>
+									Below is the poster of the project presented at the
+									 <em>See below the skin</em> group 2019 annual meeting and below is the poster.
+								</p>
+								<embed src="files/rendering_clt_poster.pdf" width="1000" height="375">
+
 								</div>
 							</section>
-
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-<!-- 							<ul class="copyright">
+							<ul class="copyright">
 								<li>&copy; Jiatian sun</li><li>Design Reference: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul> -->
+							</ul>
 						</div>
 					</footer>
 
