@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/react-gh-pages/static/js/main.8b0c706d.js",
+    "static/js/453.1965c8d6.chunk.js": "/react-gh-pages/static/js/453.1965c8d6.chunk.js",
+    "static/media/thumbnail.png": "/react-gh-pages/static/media/thumbnail.b27a2b25909a013f7126.png",
+    "static/media/icon3.png": "/react-gh-pages/static/media/icon3.0bfcf52acddc60d2c907.png",
+    "static/media/Jiatian_Sun_resume.pdf": "/react-gh-pages/static/media/Jiatian_Sun_resume.a61d865a540d09013ceb.pdf",
+    "static/media/thumbnail_small.png": "/react-gh-pages/static/media/thumbnail_small.b56a9c0f43da7fee9c0e.png",
+    "static/media/yarn-unwind-cropped.gif": "/react-gh-pages/static/media/yarn-unwind-cropped.be594b21d1d6463dae7c.gif",
+    "index.html": "/react-gh-pages/index.html",
+    "main.8b0c706d.js.map": "/react-gh-pages/static/js/main.8b0c706d.js.map",
+    "453.1965c8d6.chunk.js.map": "/react-gh-pages/static/js/453.1965c8d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.8b0c706d.js"
+  ]
+}
