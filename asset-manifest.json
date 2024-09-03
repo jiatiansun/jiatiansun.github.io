@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.js": "/static/js/main.e40fa8ec.js",
+    "main.css": "/static/css/main.44a936fc.css",
+    "main.js": "/static/js/main.8d0b21d7.js",
     "static/js/453.1965c8d6.chunk.js": "/static/js/453.1965c8d6.chunk.js",
     "static/media/thumbnail.png": "/static/media/thumbnail.b27a2b25909a013f7126.png",
     "static/media/icon3.png": "/static/media/icon3.0bfcf52acddc60d2c907.png",
     "static/media/Jiatian_Sun_resume.pdf": "/static/media/Jiatian_Sun_resume.a61d865a540d09013ceb.pdf",
     "static/media/thumbnail_small.png": "/static/media/thumbnail_small.b56a9c0f43da7fee9c0e.png",
+    "static/media/work-sans-latin-wght-normal.woff2": "/static/media/work-sans-latin-wght-normal.ef5a90754bd421aa81fb.woff2",
+    "static/media/work-sans-latin-ext-wght-normal.woff2": "/static/media/work-sans-latin-ext-wght-normal.1ecd21fe07b6dd5d23ba.woff2",
+    "static/media/comic-neue-latin-400-normal.woff2": "/static/media/comic-neue-latin-400-normal.f50eaba0eb4d65e17d4d.woff2",
+    "static/media/comic-neue-latin-400-normal.woff": "/static/media/comic-neue-latin-400-normal.57b81a5296a488d4dbfa.woff",
     "static/media/yarn-unwind-cropped.gif": "/static/media/yarn-unwind-cropped.be594b21d1d6463dae7c.gif",
+    "static/media/work-sans-vietnamese-wght-normal.woff2": "/static/media/work-sans-vietnamese-wght-normal.b56e571bcfc5e2c2f00e.woff2",
     "index.html": "/index.html",
-    "main.e40fa8ec.js.map": "/static/js/main.e40fa8ec.js.map",
+    "main.44a936fc.css.map": "/static/css/main.44a936fc.css.map",
+    "main.8d0b21d7.js.map": "/static/js/main.8d0b21d7.js.map",
     "453.1965c8d6.chunk.js.map": "/static/js/453.1965c8d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e40fa8ec.js"
+    "static/css/main.44a936fc.css",
+    "static/js/main.8d0b21d7.js"
   ]
 }
