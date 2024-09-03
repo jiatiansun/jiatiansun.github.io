@@ -2349,6 +2349,16 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fontsource-variable/work-sans@^5.0.20":
+  version "5.0.20"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/work-sans/-/work-sans-5.0.20.tgz#195379475e3eb228a178fa6a879b4079f5d108ef"
+  integrity sha512-InVf5/3xZJ1ZQs/wDTk7s5D2iM1i1K0oSCo7bIy6vCQ193Hkp1Uxgw9WhlWMBgJFwSLM6/+EC9ZMtiqnvghRLg==
+
+"@fontsource/comic-neue@^5.0.13":
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/comic-neue/-/comic-neue-5.0.13.tgz#9d87f4a45268853db8e90873d1764d858f0dbf50"
+  integrity sha512-8rjgjahyO4gbCkUVTt3X1IAZaifXYyuJanTmxSyWA2l0sf5G9PHciSsBmO0zKrLS3Ggpy9X9tsGPHKUoJfU1Fg==
+
 "@fontsource/open-sans@^5.0.29":
   version "5.0.29"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.29.tgz#6ec23ecf426d8d89d9a8f96f1a1c4923d3a67664"

@@ -49,7 +49,7 @@ export const Intro = props => {
             <YarnDiv/>
         </GridItem>
         <GridItem px={10} bg="orange.50" area={'descrip'}> 
-            <Text fontFamily="Comic Sans MS, Comic Sans, cursive" fontSize="md" textAlign={['left']}>
+            <Text fontSize="md" textAlign={['left']}>
                a Cornell CS graduate student working on physically-based simulation of fibers under the advisory of Steve Marschner.
                Other animation-relevant topics like contact, solid mechanics, character animation, and robotics also interest me! 
             </Text>

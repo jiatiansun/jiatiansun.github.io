@@ -2,11 +2,10 @@ import React from 'react';
 import {
   ChakraProvider,
   Container,
-  theme,
 } from '@chakra-ui/react';
 import { Intro } from './SelfIntro';
 import Work from './Research';
-
+import theme from './theme'
 
 
 function App() {

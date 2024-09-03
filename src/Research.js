@@ -37,7 +37,7 @@ export default function Work()
             <Box position='relative'  border='1px' borderColor='orange.50' p={10}>
                     <Heading px={2} py={2} fontSize='25px' color='blackAlpha.700' fontFamily="Chalkduster, fantasy" textAlign="left">Past Work</Heading>
                     <Divider orientation='horizontal' borderColor='blackAlpha.700' borderWidth={2} rounded='md'/>
-                    <Stack my={5} spacing='4' color='blackAlpha.700' fontFamily="Comic Sans MS, Comic Sans, cursive" bg="orange.50">
+                    <Stack my={5} spacing='4' color='blackAlpha.700' bg="orange.50">
                     {projects.map(function(projectProps) {
                         return (
                             <LinkBox align="left" rounded='md'>
@@ -58,10 +58,9 @@ export default function Work()
                                 <LinkOverlay href={projectProps.web}>
                                 <Stack>
                                     <CardBody>
-                                        <Heading size='md' fontFamily="Comic Sans MS, Comic Sans, cursive">{projectProps.title + " "} <Badge colorScheme='purple' textAlign="center">{projectProps.venue}</Badge></Heading>
+                                        <Heading size='md'>{projectProps.title + " "} <Badge colorScheme='purple' textAlign="center">{projectProps.venue}</Badge></Heading>
                                         <Text pt='1' pb='2' fontSize='md' fontWeight="bold">{projectProps.authors}</Text>
-                                        
-                                        <Text py='0' fontSize="sm">
+                                        <Text py='0' fontSize="15px">
                                             {projectProps.abstract}
                                         </Text>
                                     </CardBody>
