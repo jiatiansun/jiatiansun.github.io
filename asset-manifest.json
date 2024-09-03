@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.44a936fc.css",
-    "main.js": "/static/js/main.ffffa955.js",
+    "main.js": "/static/js/main.e63b8996.js",
     "static/js/453.d600f0e5.chunk.js": "/static/js/453.d600f0e5.chunk.js",
     "static/media/thumbnail.png": "/static/media/thumbnail.b27a2b25909a013f7126.png",
-    "static/media/icon3.png": "/static/media/icon3.0bfcf52acddc60d2c907.png",
+    "static/media/icon_transparent.png": "/static/media/icon_transparent.0bfcf52acddc60d2c907.png",
     "static/media/Jiatian_Sun_resume.pdf": "/static/media/Jiatian_Sun_resume.a61d865a540d09013ceb.pdf",
     "static/media/thumbnail_small.png": "/static/media/thumbnail_small.b56a9c0f43da7fee9c0e.png",
     "static/media/work-sans-latin-wght-normal.woff2": "/static/media/work-sans-latin-wght-normal.ef5a90754bd421aa81fb.woff2",
@@ -15,11 +15,11 @@
     "static/media/work-sans-vietnamese-wght-normal.woff2": "/static/media/work-sans-vietnamese-wght-normal.b56e571bcfc5e2c2f00e.woff2",
     "index.html": "/index.html",
     "main.44a936fc.css.map": "/static/css/main.44a936fc.css.map",
-    "main.ffffa955.js.map": "/static/js/main.ffffa955.js.map",
+    "main.e63b8996.js.map": "/static/js/main.e63b8996.js.map",
     "453.d600f0e5.chunk.js.map": "/static/js/453.d600f0e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44a936fc.css",
-    "static/js/main.ffffa955.js"
+    "static/js/main.e63b8996.js"
   ]
 }
