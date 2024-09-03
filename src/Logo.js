@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
-import logo from './media/icon3.png';
+import logo from './media/icon_transparent.png';
 
 const spin = keyframes`
   from { transform: rotate(0deg); }
