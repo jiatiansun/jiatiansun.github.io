@@ -34,7 +34,7 @@ const projects=[{title:"Eventfulness for Interactive Video Alignment",
 export default function Work()
 {   
     return (
-            <Box position='relative'  border='1px' borderColor='orange.50' p={10}>
+            <Box border='1px' borderColor='orange.50' p={10}>
                     <Heading px={2} py={2} fontSize='25px' color='blackAlpha.700' fontFamily="Chalkduster, fantasy" textAlign="left">Past Work</Heading>
                     <Divider orientation='horizontal' borderColor='blackAlpha.700' borderWidth={2} rounded='md'/>
                     <Stack my={5} spacing='4' color='blackAlpha.700' bg="orange.50">

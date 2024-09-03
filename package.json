@@ -1,6 +1,6 @@
 {
-  "name": "web-app",
-  "version": "0.1.0",
+  "name": "carolWeb",
+  "version": "0.1.1",
   "private": true,
   "homepage": "https://jiatiansun.github.io/",
   "dependencies": {
