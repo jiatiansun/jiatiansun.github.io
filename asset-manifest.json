@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.44a936fc.css",
-    "main.js": "/static/js/main.e63b8996.js",
+    "main.js": "/static/js/main.7c486570.js",
     "static/js/453.d600f0e5.chunk.js": "/static/js/453.d600f0e5.chunk.js",
+    "static/media/chromaticity_thumbnail.png": "/static/media/chromaticity_thumbnail.2657fa99212775c8f3f6.png",
     "static/media/thumbnail.png": "/static/media/thumbnail.b27a2b25909a013f7126.png",
     "static/media/icon_transparent.png": "/static/media/icon_transparent.0bfcf52acddc60d2c907.png",
     "static/media/Jiatian_Sun_resume.pdf": "/static/media/Jiatian_Sun_resume.a61d865a540d09013ceb.pdf",
@@ -15,11 +16,11 @@
     "static/media/work-sans-vietnamese-wght-normal.woff2": "/static/media/work-sans-vietnamese-wght-normal.b56e571bcfc5e2c2f00e.woff2",
     "index.html": "/index.html",
     "main.44a936fc.css.map": "/static/css/main.44a936fc.css.map",
-    "main.e63b8996.js.map": "/static/js/main.e63b8996.js.map",
+    "main.7c486570.js.map": "/static/js/main.7c486570.js.map",
     "453.d600f0e5.chunk.js.map": "/static/js/453.d600f0e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44a936fc.css",
-    "static/js/main.e63b8996.js"
+    "static/js/main.7c486570.js"
   ]
 }
