@@ -17,13 +17,13 @@ function App() {
       <Intro/>
       </Container>
       </Center>
+
       <Center>
       <Container maxW='4xl' alignItems='left' rounded='md' bg="orange.50" centerContent>
       <Work/>
       </Container>
       </Center>
     </ChakraProvider>
-    
   );
 }
 

@@ -5,11 +5,19 @@ import { Text, Heading, Image } from '@chakra-ui/react';
 import { LinkBox, LinkOverlay } from '@chakra-ui/react';
 
 // load data
+import thumbnail_chromaticity from "./research/chromaticity/chromaticity_thumbnail.png"
 import thumbnail_event from "./research/eventfulness/thumbnail.png"
 import thumbnail_recapture from "./research/recapture/thumbnail.png"
 import thumbnail_hand from "./research/hand/thumbnail_small.png"
 
-const projects=[{title:"Eventfulness for Interactive Video Alignment",
+const projects=[{title:"Chromaticity gradient mapping for interactive control of color contrast in images and video",
+                 thumbnail: thumbnail_chromaticity,
+                 venue:"UIST24",
+                 authors:"Ruyu Yan, Jiatian Sun, Abe Davis",
+                 web:"https://www.cs.cornell.edu/abe/projects/CGC/home/",
+                 abstract:"We present a novel perceptually-motivated interactive tool for using color contrast to enhance details represented in the lightness channel of images and video. Our method lets users adjust the perceived contrast of different details by manipulating local chromaticity while preserving the original lightness of individual pixels. We show that our tool is effective for enhancing the perceived contrast of details without altering lightness in an image and present many examples of effects that can be achieved with our method on both images and video."
+                },
+                {title:"Eventfulness for Interactive Video Alignment",
                  thumbnail: thumbnail_event,
                  venue:"SIG23",
                  authors:"Jiatian Sun, Longxiulin Deng, Triantafyllos Afouras,\n Andrew Owens, Abe Davis",
